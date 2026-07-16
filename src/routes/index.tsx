@@ -283,7 +283,7 @@ function Hero() {
   ];
 
   return (
-    <section id="home" className="relative overflow-hidden pt-20 md:pt-24 pb-10 md:pb-12 mesh-bg">
+    <section id="home" className="relative overflow-hidden pt-32 md:pt-40 pb-10 md:pb-12 mesh-bg">
       {/* Full-bleed background grid overlay faded in an ellipse transparent mask */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none overflow-hidden select-none">
         <svg 
