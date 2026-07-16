@@ -10,5 +10,19 @@ export default defineConfig({
   // Deploy to Vercel with SSR + Serverless Functions support
   nitro: {
     preset: "vercel",
+    vercel: {
+      functions: {
+        maxDuration: 30,
+      },
+    },
+    compatibilityDate: "2025-01-01",
+    node: true,
+    // Disable code-splitting to fix Rolldown __commonJSMin helper bug
+    // where CJS interop helpers are not properly exported across chunks
+    rollupConfig: {
+      output: {
+        inlineDynamicImports: true,
+      },
+    },
   },
 });
