@@ -1828,7 +1828,7 @@ function Founder() {
                 className="w-full h-full object-cover object-center"
               />
               <div className="absolute bottom-6 left-6 right-6 rounded-2xl glass p-4">
-                <p className="text-xs uppercase tracking-widest text-primary font-semibold">Founder & CEO</p>
+                <p className="text-xs uppercase tracking-widest text-primary font-semibold">Founder</p>
                 <p className="mt-1 text-xl font-extrabold text-navy">Swapnil Agarkhedkar</p>
                 <p className="text-xs text-muted-foreground">Digital Marketing & AI Strategist</p>
               </div>
@@ -2253,7 +2253,6 @@ export function Footer() {
     ["Company", ["About", "Founder", "Careers", "Contact"]],
     ["Services", ["Performance Marketing", "AI Automation", "Websites", "Branding"]],
     ["Industries", ["Healthcare", "Real Estate", "Technology", "Hospitality"]],
-    ["Resources", ["Portfolio", "Case Studies", "Blog"]],
   ] as const;
 
   const getLinkHref = (name: string) => {
@@ -2286,34 +2285,27 @@ export function Footer() {
       <div className="container-1280 relative">
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-2.5">
-              <span className="size-10 grid place-items-center rounded-2xl gradient-brand">
-                <Sparkles className="size-5" />
-              </span>
-              <div>
-                <p className="font-extrabold text-lg">The Blue Intellect</p>
-                <p className="text-xs text-white/60">Marketing Beyond Campaigns.</p>
-              </div>
-            </div>
+            <a href="/#home" className="inline-block">
+              {/* Desktop Logo */}
+              <img
+                src="/logo/tbi-desktop-logo.png"
+                alt="The Blue Intellect Logo"
+                className="hidden md:block h-9 object-contain"
+              />
+              {/* Mobile Logo */}
+              <img
+                src="/tbi-mobile-logo.png"
+                alt="The Blue Intellect Logo"
+                className="block md:hidden h-8 object-contain"
+              />
+            </a>
             <p className="mt-5 text-sm text-white/70 leading-[1.7] max-w-sm">
               A modern growth studio blending strategy, AI and digital growth for
               ambitious businesses.
             </p>
-
-            <form onSubmit={(e) => e.preventDefault()} className="mt-6 flex items-center gap-2 p-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur max-w-md">
-              <input
-                type="email"
-                aria-label="Email"
-                placeholder="Your email for growth insights"
-                className="flex-1 bg-transparent px-4 py-2 text-sm outline-none placeholder:text-white/50"
-              />
-              <button className="btn-primary !h-10 !px-4 !text-[0.85rem]">
-                Subscribe <ArrowRight className="size-3.5" />
-              </button>
-            </form>
           </div>
 
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
             {cols.map(([title, links]) => (
               <div key={title}>
                 <p className="text-[0.72rem] uppercase tracking-[0.15em] font-bold text-white/50">{title}</p>
@@ -2331,16 +2323,22 @@ export function Footer() {
 
         <div className="mt-16 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs text-white/50">
           <p>© {new Date().getFullYear()} The Blue Intellect. All rights reserved.</p>
-          <div className="flex items-center gap-2">
-            {[Linkedin, Instagram, Youtube, Facebook].map((Icon, i) => (
-              <a key={i} href="#" aria-label="Social" className="size-9 grid place-items-center rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-all">
-                <Icon className="size-3.5" />
+          <div className="flex items-center gap-2.5">
+            {[
+              { Icon: Instagram, href: "https://www.instagram.com/blue_intellect?igsh=MW80b21wamhkOWZwaA==", color: "bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] hover:shadow-[0_0_12px_rgba(238,42,123,0.4)]" },
+              { Icon: Facebook, href: "https://www.facebook.com/share/1EafTBkTHJ/", color: "bg-[#1877F2] hover:bg-[#1877F2]/90 hover:shadow-[0_0_12px_rgba(24,119,242,0.4)]" },
+            ].map(({ Icon, href, color }, i) => (
+              <a
+                key={i}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Social"
+                className={`size-9 grid place-items-center rounded-full text-white transition-all duration-300 hover:scale-110 hover:-translate-y-0.5 ${color}`}
+              >
+                <Icon className="size-4" />
               </a>
             ))}
-          </div>
-          <div className="flex items-center gap-5">
-            <a href="#" className="hover:text-white">Privacy</a>
-            <a href="#" className="hover:text-white">Terms</a>
           </div>
         </div>
       </div>
