@@ -1853,15 +1853,17 @@ function Founder() {
             <div className="mt-8 grid sm:grid-cols-3 gap-3">
               {[
                 { n: "MBA", l: "Marketing Management", icon: GraduationCap },
-                { n: "MJMC", l: "Advertising Specialization", icon: Megaphone },
-                { n: "Certified", l: "Digital Strategist", icon: Award },
+                { n: "MJMC", l: "Masters in Journalism and Mass Communication", icon: Megaphone },
+                { n: "Certified", l: "Digital Marketing Strategist", icon: Award },
               ].map(({ n, l, icon: Icon }) => (
-                <div key={l} className="card-elevated p-5 text-center flex flex-col items-center justify-center">
-                  <div className="size-9 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-3">
-                    <Icon className="size-4.5" />
+                <div key={l} className="card-elevated p-4 text-center flex flex-col items-center justify-center h-full min-h-[145px]">
+                  <div className="size-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2.5">
+                    <Icon className="size-4" />
                   </div>
-                  <p className="text-lg font-extrabold gradient-text">{n}</p>
-                  <p className="text-[0.68rem] text-muted-foreground mt-1 leading-normal">{l}</p>
+                  <p className="text-base font-bold gradient-text">{n}</p>
+                  <p className="text-[0.72rem] sm:text-[0.62rem] md:text-[0.68rem] font-medium text-slate-500 mt-1 leading-snug max-w-[150px] mx-auto">
+                    {l}
+                  </p>
                 </div>
               ))}
             </div>
