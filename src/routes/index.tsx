@@ -122,32 +122,28 @@ export function Nav() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-3" : "py-5"
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "py-3" : "py-5"
+        }`}
     >
       <div className="container-1280">
         <div
-          className={`flex items-center justify-between rounded-full px-4 md:px-6 transition-all duration-300 ${
-            scrolled ? "glass py-2" : "glass py-2.5"
-          }`}
+          className={`flex items-center justify-between rounded-full px-4 md:px-6 transition-all duration-300 ${scrolled ? "glass py-2" : "glass py-2.5"
+            }`}
         >
           <a href="#home" className="flex items-center">
             {/* Desktop Logo */}
             <img
               src="/logo/tbi-desktop-logo.png"
               alt="The Blue Intellect Logo"
-              className={`hidden md:block object-contain transition-all duration-300 ${
-                scrolled ? "h-7" : "h-9"
-              }`}
+              className={`hidden md:block object-contain transition-all duration-300 ${scrolled ? "h-7" : "h-9"
+                }`}
             />
             {/* Mobile Logo */}
             <img
               src="/tbi-mobile-logo.png"
               alt="The Blue Intellect Logo"
-              className={`block md:hidden object-contain transition-all duration-300 ${
-                scrolled ? "h-7" : "h-8"
-              }`}
+              className={`block md:hidden object-contain transition-all duration-300 ${scrolled ? "h-7" : "h-8"
+                }`}
             />
           </a>
 
@@ -159,9 +155,8 @@ export function Nav() {
                   key={label}
                   href={href}
                   aria-current={isActive ? "page" : undefined}
-                  className={`relative px-3.5 py-2 text-[0.875rem] font-medium transition-colors ${
-                    isActive ? "text-navy" : "text-navy/60 hover:text-navy"
-                  }`}
+                  className={`relative px-3.5 py-2 text-[0.875rem] font-medium transition-colors ${isActive ? "text-navy" : "text-navy/60 hover:text-navy"
+                    }`}
                 >
                   {isActive && (
                     <motion.span
@@ -277,7 +272,7 @@ function Hero() {
     { name: "Arya Foods", src: "/assets/work/logo/Arya_Foods.png" },
     { name: "Key Tech", src: "/assets/work/logo/Key_Tech.png" },
     { name: "Jain Bakers", src: "/assets/work/logo/Jain_Bakers _logo.png" },
-    { name: "Shree Balaji", src: "/assets/work/logo/shree-balaji-logo.png" },
+
     { name: "Pyramid Agro", src: "/assets/work/logo/pyramid-agro-logo.png" },
     { name: "Nexa Lead AI", src: "/assets/work/logo/nexa-lead-ai-logo.png" },
   ];
@@ -286,11 +281,11 @@ function Hero() {
     <section id="home" className="relative overflow-hidden pt-32 md:pt-40 pb-10 md:pb-12 mesh-bg">
       {/* Full-bleed background grid overlay faded in an ellipse transparent mask */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none overflow-hidden select-none">
-        <svg 
-          className="w-full h-full opacity-65 stroke-primary/30 fill-none" 
-          style={{ 
-            maskImage: "radial-gradient(ellipse at center, black 25%, transparent 85%)", 
-            WebkitMaskImage: "radial-gradient(ellipse at center, black 25%, transparent 85%)" 
+        <svg
+          className="w-full h-full opacity-65 stroke-primary/30 fill-none"
+          style={{
+            maskImage: "radial-gradient(ellipse at center, black 25%, transparent 85%)",
+            WebkitMaskImage: "radial-gradient(ellipse at center, black 25%, transparent 85%)"
           }}
         >
           <defs>
@@ -428,12 +423,12 @@ function About() {
           {/* Right Column */}
           <div className="md:col-span-6 flex flex-col items-start md:pt-8 md:pl-6">
             <p className="text-slate-600 text-[1.05rem] leading-[1.65] max-w-xl">
-              Together, we help our clients achieve tangible, measurable results. 
-              Focused on business outcomes, we bring a unique set of expertise 
+              Together, we help our clients achieve tangible, measurable results.
+              Focused on business outcomes, we bring a unique set of expertise
               and skills to the party.
             </p>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="mt-6 inline-flex items-center gap-1.5 text-[0.82rem] font-bold uppercase tracking-[0.15em] text-slate-900 border-b-2 border-slate-900 pb-1 hover:text-[#2563EB] hover:border-[#2563EB] transition-colors w-fit"
             >
               More About Us <ArrowRight className="size-3.5" />
@@ -444,7 +439,7 @@ function About() {
         {/* 3-Card Row underneath */}
         <div className="mt-14 sm:mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {/* Card 1: Better audiences */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
@@ -467,7 +462,7 @@ function About() {
           </motion.div>
 
           {/* Card 2: Better analytics */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
@@ -491,7 +486,7 @@ function About() {
           </motion.div>
 
           {/* Card 3: Better outcomes */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
@@ -702,7 +697,7 @@ function WebsiteMockup({ title, ind, url, localImg }: WebsiteMockupProps) {
               <div className="size-2 bg-slate-200 rounded-full" />
             </div>
           </div>
-          
+
           {/* Hero section skeleton */}
           <div className="space-y-2.5 my-auto flex flex-col items-center">
             <div className="h-4.5 w-3/4 bg-slate-200 rounded-md" />
@@ -1346,7 +1341,7 @@ const logoProjects = logoFilenames.map((filename) => {
     .replace(/[_-]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
-    
+
   return {
     t: title,
     category: "Creative Logo",
@@ -1433,9 +1428,8 @@ function LightboxContent({
         key={imgSrc}
         src={imgSrc}
         alt={selectedProject.t}
-        className={`max-w-[85vw] max-h-[75vh] object-contain rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.95)] border border-white/10 ${
-          selectedProject.category === "Creative Logo" ? "bg-white p-8 md:p-12" : ""
-        }`}
+        className={`max-w-[85vw] max-h-[75vh] object-contain rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.95)] border border-white/10 ${selectedProject.category === "Creative Logo" ? "bg-white p-8 md:p-12" : ""
+          }`}
         initial={{ opacity: 0, y: 10, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
@@ -1460,11 +1454,11 @@ export function Portfolio({ isFullPage = false }: { isFullPage?: boolean }) {
   useEffect(() => {
     setExpanded(false);
   }, [filter]);
-  
+
   const categories = ["All", "WhatsApp Automation", "Marketing & Ads", "Web & Design", "SaaS Projects", "Creative Logo"];
-  
-  const filteredProjects = filter === "All" 
-    ? projects 
+
+  const filteredProjects = filter === "All"
+    ? projects
     : projects.filter(p => p.category === filter);
 
   // Sort websites first, posts second, logos third to keep layout grouped & professional
@@ -1484,10 +1478,10 @@ export function Portfolio({ isFullPage = false }: { isFullPage?: boolean }) {
     const websites = sortedProjects.filter(p => p.url !== "");
     // Exclude Creative Logo from initial row list of All tab
     const posts = sortedProjects.filter(p => p.url === "" && p.category !== "Creative Logo");
-    
+
     const initialWebsites = websites.slice(0, 3);
     const initialPosts = posts.slice(0, 3);
-    
+
     displayProjects = [...initialWebsites, ...initialPosts];
     showViewMoreButton = sortedProjects.length > displayProjects.length;
   }
@@ -1518,8 +1512,8 @@ export function Portfolio({ isFullPage = false }: { isFullPage?: boolean }) {
               At The Blue Intellect, our work speaks for itself. We design high-impact solutions, from revitalizing brand identities and packaging to launching digital campaigns. Each project reflects our commitment to creative excellence and strategic growth.
             </p>
             {!isFullPage && (
-              <a 
-                href="/portfolio" 
+              <a
+                href="/portfolio"
                 className="btn-ghost mt-6"
               >
                 See all case studies <ArrowUpRight className="size-4" />
@@ -1536,11 +1530,10 @@ export function Portfolio({ isFullPage = false }: { isFullPage?: boolean }) {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-all border cursor-pointer ${
-                  isActive
+                className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-all border cursor-pointer ${isActive
                     ? "border-navy bg-navy text-white"
                     : "border-hairline bg-white/60 hover:bg-white text-navy/70 hover:text-navy"
-                }`}
+                  }`}
               >
                 {isActive && (
                   <motion.span
@@ -1556,15 +1549,14 @@ export function Portfolio({ isFullPage = false }: { isFullPage?: boolean }) {
         </div>
 
         {/* Dynamic Project Grid */}
-        <motion.div 
-          layout 
-          className={`mt-10 grid gap-4 lg:gap-5 ${
-            filter === "Creative Logo"
+        <motion.div
+          layout
+          className={`mt-10 grid gap-4 lg:gap-5 ${filter === "Creative Logo"
               ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
               : filter === "Marketing & Ads"
                 ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
                 : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-          }`}
+            }`}
         >
           <AnimatePresence mode="popLayout">
             {displayProjects.map((p, i) => (
@@ -1575,21 +1567,20 @@ export function Portfolio({ isFullPage = false }: { isFullPage?: boolean }) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className={`group relative rounded-[2rem] border border-hairline overflow-hidden hover:border-primary/30 transition-colors duration-300 cursor-pointer bg-slate-50 ${
-                  p.category === "Creative Logo"
+                className={`group relative rounded-[2rem] border border-hairline overflow-hidden hover:border-primary/30 transition-colors duration-300 cursor-pointer bg-slate-50 ${p.category === "Creative Logo"
                     ? "aspect-square"
                     : p.url ? "aspect-[16/9]" : "aspect-[4/5]"
-                }`}
+                  }`}
                 onClick={() => setSelectedProject(p)}
               >
                 {/* Visual mockup container (full bleed, covering card) */}
                 <div className="w-full h-full relative">
-                  
+
                   {/* Mockup visual */}
                   <div className="w-full h-full relative z-10">
                     {p.mock}
                   </div>
-                  
+
                   {/* Bottom overlay with compact glass title card and clean arrow icon (only for projects with live website link) */}
                   {p.url && (
                     <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between z-30 pointer-events-none">
@@ -1601,7 +1592,7 @@ export function Portfolio({ isFullPage = false }: { isFullPage?: boolean }) {
                       </div>
                     </div>
                   )}
-                  
+
                   {/* Hover tint overlay */}
                   <div className="absolute inset-0 bg-navy/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20" />
                 </div>
@@ -1630,9 +1621,8 @@ export function Portfolio({ isFullPage = false }: { isFullPage?: boolean }) {
               {/* Overlay */}
               <DialogPrimitive.Overlay asChild forceMount>
                 <motion.div
-                  className={`fixed inset-0 z-50 backdrop-blur-md ${
-                    selectedProject.url ? "bg-slate-900/60" : "bg-black/90"
-                  }`}
+                  className={`fixed inset-0 z-50 backdrop-blur-md ${selectedProject.url ? "bg-slate-900/60" : "bg-black/90"
+                    }`}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -1664,7 +1654,7 @@ export function Portfolio({ isFullPage = false }: { isFullPage?: boolean }) {
                           <X className="size-4" />
                         </DialogPrimitive.Close>
                       </div>
-                      
+
                       {/* Browser frame */}
                       <div className="flex-1 overflow-hidden flex flex-col">
                         <div className="w-full h-full flex flex-col bg-white overflow-hidden">
@@ -1675,7 +1665,7 @@ export function Portfolio({ isFullPage = false }: { isFullPage?: boolean }) {
                               <span className="size-3 rounded-full bg-[#FFBD2E]" />
                               <span className="size-3 rounded-full bg-[#27C93F]" />
                             </div>
-                            
+
                             <div className="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-1 text-[0.65rem] text-slate-500 flex-1 max-w-xl font-mono select-all truncate">
                               <Globe className="size-3 text-slate-400 shrink-0" />
                               <span className="truncate flex-1 text-left">{selectedProject.url}</span>
@@ -1690,7 +1680,7 @@ export function Portfolio({ isFullPage = false }: { isFullPage?: boolean }) {
                               Visit Live Site <ExternalLink className="size-3" />
                             </a>
                           </div>
-                          
+
                           {/* IFrame or High-Res Screenshot for Domain-Protected Sites */}
                           <div className="flex-1 bg-white relative overflow-y-auto">
                             {selectedProject.noEmbed ? (
@@ -1779,7 +1769,7 @@ function Testimonials() {
         <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
 
-        <div 
+        <div
           className="w-max flex gap-6 animate-marquee hover:[animation-play-state:paused]"
           style={{ animationDuration: '40s' }}
         >
@@ -1930,11 +1920,10 @@ export function FloatingInput({
         />
       )}
       <span
-        className={`absolute left-4 pointer-events-none text-muted-foreground transition-all ${
-          filled || focused
+        className={`absolute left-4 pointer-events-none text-muted-foreground transition-all ${filled || focused
             ? "top-1.5 text-[0.7rem] font-semibold text-primary"
             : "top-4 text-sm"
-        }`}
+          }`}
       >
         {label} {required && <span className="text-red-500">*</span>}
       </span>
@@ -1974,28 +1963,25 @@ export function FloatingSelect({
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className={`w-full text-left bg-transparent px-4 pt-6 pb-2 text-sm text-navy outline-none border rounded-2xl transition-all flex items-center justify-between h-[54px] cursor-pointer shadow-[0_2px_10px_rgba(0,0,0,0.03)] ${
-          open
+        className={`w-full text-left bg-transparent px-4 pt-6 pb-2 text-sm text-navy outline-none border rounded-2xl transition-all flex items-center justify-between h-[54px] cursor-pointer shadow-[0_2px_10px_rgba(0,0,0,0.03)] ${open
             ? "border-primary ring-4 ring-primary/10 shadow-[0_4px_16px_rgba(37,99,235,0.1)]"
             : "border-hairline hover:border-slate-300 hover:shadow-[0_4px_16px_rgba(37,99,235,0.05)]"
-        }`}
+          }`}
       >
         <span className={filled ? "text-navy font-medium truncate pr-4" : "text-transparent"}>
           {value || "Select option"}
         </span>
         <ChevronDown
-          className={`size-4 text-slate-400 shrink-0 transition-transform duration-200 ${
-            open ? "rotate-180 text-primary" : ""
-          }`}
+          className={`size-4 text-slate-400 shrink-0 transition-transform duration-200 ${open ? "rotate-180 text-primary" : ""
+            }`}
         />
       </button>
 
       <span
-        className={`absolute left-4 pointer-events-none text-muted-foreground transition-all ${
-          filled || open
+        className={`absolute left-4 pointer-events-none text-muted-foreground transition-all ${filled || open
             ? "top-1.5 text-[0.7rem] font-semibold text-primary"
             : "top-4 text-sm"
-        }`}
+          }`}
       >
         {label} {required && <span className="text-red-500">*</span>}
       </span>
@@ -2019,11 +2005,10 @@ export function FloatingSelect({
                     onChange(opt);
                     setOpen(false);
                   }}
-                  className={`w-full text-left px-4 py-2.5 text-sm transition-colors flex items-center justify-between cursor-pointer ${
-                    isSelected
+                  className={`w-full text-left px-4 py-2.5 text-sm transition-colors flex items-center justify-between cursor-pointer ${isSelected
                       ? "bg-blue-50/80 text-[#2563EB] font-bold"
                       : "text-slate-700 hover:bg-slate-50"
-                  }`}
+                    }`}
                 >
                   <span>{opt}</span>
                   {isSelected && <Check className="size-4 text-[#2563EB] shrink-0" />}
@@ -2112,16 +2097,16 @@ export function Contact() {
         <div className="grid lg:grid-cols-12 gap-8 items-stretch">
           <div className="lg:col-span-5 rounded-[2.5rem] p-8 md:p-10 relative overflow-hidden bg-[#EFF6FF] border border-blue-100 text-navy flex flex-col justify-between shadow-[0_4px_30px_rgba(37,99,235,0.04)]">
             <div className="absolute -top-20 -right-20 size-72 rounded-full bg-blue-200/40 blur-3xl pointer-events-none" />
-            
+
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold leading-[1.1] text-slate-900 tracking-tight">
                 Ready to Grow <span className="gradient-text">Smarter?</span>
               </h2>
-              
+
               <p className="mt-4 text-slate-600 text-[0.98rem] leading-[1.65]">
                 Whether you're looking to generate more leads, strengthen your brand, automate your business processes, or build a future-ready digital presence, we're here to help.
               </p>
-              
+
               <p className="mt-3 text-slate-600 text-sm leading-[1.65]">
                 Let's discuss your goals and create a growth strategy tailored specifically for your business.
               </p>
@@ -2228,7 +2213,7 @@ export function Contact() {
               <h3 className="text-2xl font-extrabold text-slate-900 tracking-tight">
                 Message Sent Successfully!
               </h3>
-              
+
               <p className="mt-2 text-slate-600 text-sm leading-relaxed">
                 Thank you for reaching out. We have received your inquiry and a confirmation copy has been sent to your email ID.
               </p>
